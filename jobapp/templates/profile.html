@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSLee</title>
+    <style>
+        body { background-color: #0e9390 }
+        #header { 
+            color: #f58b27;
+            font-size: 60px;
+            -webkit-text-stroke-width: 2.5px;
+            -webkit-text-stroke-color: #2d1a47;
+        }
+        .text { 
+            color: #2d1a47
+        }
+        /* table {
+            background-color: #f0eea1;
+        } */
+        table {  
+            color: #333;
+            font-family: Helvetica, Arial, sans-serif;
+            width: 640px; 
+            border-collapse: 
+            collapse; border-spacing: 0; 
+        }
+
+        td, th {  
+            border: 1px solid transparent; /* No more visible border */
+            height: 30px; 
+            transition: all 0.3s;  /* Simple transition for hover effect */
+        }
+
+        th {  
+            background: #DFDFDF;  /* Darken header a bit */
+            font-weight: bold;
+        }
+
+        td {  
+            background: #FAFAFA;
+            text-align: center;
+        }
+
+        /* Cells in even rows (2,4,6...) are one color */        
+        tr:nth-child(even) td { background: #F1F1F1; }   
+
+        /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */        
+        tr:nth-child(odd) td { background: #FEFEFE; }  
+
+        tr td:hover { background: #666; color: #FFF; }  
+        /* Hover cell effect! */
+    </style>
+</head>
+<body>
+    <h1 id="header">JAESEO's page</h1>
+    <div class="text">Hello, I'm JAESEO LEE</div>
+    <div class="text">I am interested in machine learning, data engineering and developing python django server.</div>
+    <p class="text">I'm Student of ssafy</p>
+    <table class="text">
+        <tr>
+            <td>나이</td>
+            <td>26살</td>
+        </tr>
+        <tr>
+            <td>대학교</td>
+            <td>한국에있는대학교</td>
+        </tr>
+        <tr>
+            <td>혈액형</td>
+            <td>O형</td>
+        </tr>
+    </table>
+
+</body>
+</html>

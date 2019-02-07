@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block contents %}
+<div class="container my-4">
+    <div class="row">
+      <div class="card col-12" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><h5 class="card-title">{{ article.title }}</h5></li>
+          <li class="list-group-item">{{ article.created_at }} {{ article.author }}</li>
+          <li class="list-group-item">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <a href="/articles" class="btn btn-info">목록</a>
+              <a href="/articles/{{ article.id }}/edit" class="btn btn-success">수정</button></a>
+              <!--<a href="/articles/{{ article.id }}/delete" class="btn btn-danger">삭제</button></a>-->
+              <form id="submit-delete-article" class="btn btn-danger" action="/articles/{{ article.id }}/delete" method="post" onclick="document.getElementById('submit-delete-article').submit()">
+                삭제
+              </form>
+            </div>
+          </li>
+        </ul>
+        <div class="card-body article-content">
+          <p class="card-text">{{ article.content }}</p>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

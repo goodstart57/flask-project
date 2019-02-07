@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block contents %}
+<a class="create-article remove-a-color my-0 py-2" href="/articles/new">
+    게시글 작성하기
+</a>
+<div class="container">
+    <div class="row my-4">
+        <table class="table" align="center">
+          <thead class="thead-dark">
+            <tr>
+              <th class="w-25" scope="col">#</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for article in articles %}
+            
+              <tr>
+                <th class="rowspan-n w-25" scope="row">{{ article.created_at }}</th>
+                <td>
+                    <a class="remove-a-color" href="/articles/{{ article.id }}">
+                        <div>{{ article.title }}</div>
+                    </a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

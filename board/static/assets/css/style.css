@@ -1,0 +1,11 @@
+.toggle-create-article {
+    background-color: #c9d6e0;
+    border: 1px solid #c9d6e0;
+    text-align: center;
+}
+
+.btn-delete-article, .btn-edit-article {
+    background-color: #53687c;
+    border: 1px solid #53687c;
+    color: white;
+}

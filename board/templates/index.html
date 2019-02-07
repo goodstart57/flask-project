@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>게시판</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/assets/css/style.css" media="screen" />
+    
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid my-0">
+        <div class="container">
+            <h1 class="display-4">게시판</h1>
+            <p class="lead">얘기 나누자</p>
+        </div>
+    </div>
+    <p id="toggle-create-article" class="toggle-create-article py-2">게시글 작성하기</p>
+    <div class="container">
+        <div id="create-article" class="row">
+            <form class="col-12 p-0" action="create" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="제목" name="title">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="내용" name="content"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="background-color: #53687c; border: 1px solid #53687c">Submit</button>
+            </form>
+            <hr>
+        </div>
+        <div class="row my-4">
+            <table class="table" align="center">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in items["articles"] %}
+                <tr>
+                  <th rowspan="2" class="rowspan-n" scope="row">{{ row[0] }}</th>
+                  <td>{{ row[1] }}</td>
+                  <td rowspan="2" class="rowspan-n" align="center">
+                     <a href="/delete/{{ row[0] }}">
+                        <button type="submit" class="btn btn-delete-article">삭제</button>
+                     </a>
+                  </td>
+                  <td rowspan="2" class="rowspan-n" align="center">
+                     <a href="/edit/{{ row[0] }}">
+                        <button type="submit" class="btn btn-edit-article">수정</button>
+                     </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{ row[2] }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="static/assets/js/btn.js"></script>
+</body>
+</html>

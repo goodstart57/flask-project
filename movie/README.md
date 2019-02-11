@@ -196,7 +196,7 @@ db.create_all()
 
 ### 영화 목록
 
-![index](static\image\movie-index.png)
+![index](static/image/movie-index.png)
 
 ```python
 # app.py : index
@@ -219,7 +219,7 @@ def index():
 
 ### 새 영화 등록
 
-![new-movie](static\image\movie-new.png)
+![new-movie](static/image/movie-new.png)
 
 ```python
 @app.route("/movies/new")
@@ -254,7 +254,7 @@ def create():
 
 ### 상세보기
 
-![movie-show](static\image\movie-show.png)
+![movie-show](static/image/movie-show.png)
 
 ```python
 @app.route("/movies/<int:movie_id>")

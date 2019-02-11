@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block contents %}
+<!--<a class="new-minfo remove-a-color my-0 py-2" href="/articles/new">새 영화 등록</a>-->
+<div class="scroll-movie-info">
+  <a class="movie-info-item" href="/movies/new">
+    <img class="movie-info-poster request-new-minfo" src="/static/image/request-new-minfo.jpg"/> <!-- 요청 문구 -->
+    <img src="/static/svg/si-glyph-button-plus.svg"/>
+    <div class="movie-info-text">
+      <p class="movie-info-text-title">새로운! 영화를! </p>
+      <p class="movie-info-text-date">등록! 해주세요!</p>
+    </div>
+  </a>
+  {% for movie in movies %}
+  <a class="movie-info-item" href="/movies/{{ movie.id }}">
+    <img class="movie-info-poster" src="{{ movie.poster_url }}"/>
+    <div class="movie-info-text">
+      <p class="movie-info-text-title">{{ movie.title }}</p>
+      <p class="movie-info-text-date">{{ movie.score }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

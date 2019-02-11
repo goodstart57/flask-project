@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Noto+Sans+KR:400,700,900&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <!-- nav bar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/movies">영 화</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">인기영화 </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              분류 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">드라마</a>
+                <a class="dropdown-item" href="#">판타지</a>
+                <a class="dropdown-item" href="#">서부</a>
+                <a class="dropdown-item" href="#">공포</a>
+                <a class="dropdown-item" href="#">로맨스</a>
+                <a class="dropdown-item" href="#">모험</a>
+                <a class="dropdown-item" href="#">스릴러</a>
+                <a class="dropdown-item" href="#">느와르</a>
+                <a class="dropdown-item" href="#">컬트</a>
+                <a class="dropdown-item" href="#">다큐멘터리</a>
+                <a class="dropdown-item" href="#">코미디</a>
+                <a class="dropdown-item" href="#">가족</a>
+                <a class="dropdown-item" href="#">미스터리</a>
+                <a class="dropdown-item" href="#">전쟁</a>
+                <a class="dropdown-item" href="#">애니메이션</a>
+                <a class="dropdown-item" href="#">범죄</a>
+                <a class="dropdown-item" href="#">뮤지컬</a>
+                <a class="dropdown-item" href="#">SF</a>
+                <a class="dropdown-item" href="#">액션</a>
+                <a class="dropdown-item" href="#">무협</a>
+                <a class="dropdown-item" href="#">에로</a>
+                <a class="dropdown-item" href="#">서스펜스</a>
+                <a class="dropdown-item" href="#">서사</a>
+                <a class="dropdown-item" href="#">블랙코미디</a>
+                <a class="dropdown-item" href="#">실험</a>
+                <a class="dropdown-item" href="#">영화카툰</a>
+                <a class="dropdown-item" href="#">영화음악</a>
+                <a class="dropdown-item" href="#">영화패러디포스터</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">기타</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- nav bar end -->
+    {% block body %}
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

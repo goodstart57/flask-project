@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+  <div class="row justify-content-center my-4">
+      <img class="col-sm-12 col-md-6 movie-dinfo-poster" src="{{ movie.poster_url }}"/>
+      <div class="col-sm-12 col-md-6 movie-dinfo-text my-4">
+        <h3 class="movie-dinfo-text-title">{{ movie.title }}</h3>
+        <p class="display-5">{{ movie.title_en }}</p>
+        <p class="movie-dinfo-text-aud">누적 관객수: {{ movie.audience }}</p>
+        <p class="movie-dinfo-text-date">개봉 일자: {{ movie.open_date.date() }}</p>
+        <hr>
+        <button type="button" class="btn btn-primary">★ {{ movie.score }}</button>
+        <button type="button" class="btn btn-primary">{{ movie.genre }}</button>
+        <button type="button" class="btn btn-primary">{{ movie.watch_grade }}</button>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <a class="btn btn-secondary btn-show-setting" href="/movies" role="button">
+            <i class="fas fa-list"></i>
+          </a>
+          <a class="btn btn-secondary btn-show-setting" href="/movies/{{ movie.id }}/delete" role="button">
+            <i class="fas fa-trash-alt"></i>
+          </a>
+          <a class="btn btn-secondary btn-show-setting" href="/movies/{{ movie.id }}/edit" srole="button">
+            <i class="fas fa-edit"></i>
+          </a>
+        </div>
+        <hr>
+        <p class="movie-dinfo-text-desc">영화설명: {{ movie.description }}</p>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock %}

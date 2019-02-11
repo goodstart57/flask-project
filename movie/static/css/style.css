@@ -1,0 +1,177 @@
+html, body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* base */
+.navbar {
+    padding: 0 16px;
+}
+
+.navbar-brand {
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 3rem;
+    padding: 0;
+}
+.movie-header {
+    background-image: url("/static/image/movie-header.jpg");
+    min-height: 30rem;
+}
+
+h1.movie-header-title {
+    color: white;
+    font-size: 12rem;
+    letter-spacing: 10px;
+    text-align: center;
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+
+
+
+/* index */
+.new-minfo {
+    display: block;
+    background-color: #20364c;
+    border: 1px solid #20364c;
+    text-align: center;
+}
+
+div.scroll-movie-info {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/* index - movie info scroll */
+.request-new-minfo {
+    /*border: 2px solid white;*/
+    /*border-radius: 1rem;*/
+}
+
+div.scroll-movie-info > .movie-info-item {
+    display: inline-block;
+    text-decoration: none;
+}
+
+div.scroll-movie-info > .movie-info-item:hover {
+  background-color: #777;
+}
+
+.movie-info-item > img.movie-info-poster {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scroll-movie-info > .movie-info-item > div.movie-info-text {
+    text-align: center;
+    color: white;
+}
+
+div.scroll-movie-info > .movie-info-item > div.movie-info-text > p.movie-info-text-title {
+    margin-bottom: 0;
+}
+
+
+.btn-delete-article, .btn-edit-article {
+    background-color: #53687c;
+    border: 1px solid #53687c;
+    color: white;
+}
+
+.remove-a-color {
+    color: #181818;
+    text-decoration: none;
+}
+
+/* show movie info */
+.movie-dinfo-poster {
+    display: inline-block;
+    height: 800px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* create new movie info */
+
+.slidecontainer > .slide-label {
+    position: absolute;
+    padding: 0 12px;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+
+
+/*movie dinfo show*/
+
+a.btn.btn-secondary.btn-show-setting {
+    color: white;
+}
+
+
+/* read article */
+.wrapper-read-article {
+    border: 2.5px solid #181818;
+}
+
+.article-content {
+    min-height: 20rem;
+}
+
+.btn-delete-inner-btn {
+    paddding: 0;
+    margin: 0;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: none;
+}
